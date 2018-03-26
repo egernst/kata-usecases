@@ -1,6 +1,6 @@
 #!/bin/bash
 vendor=$( lspci -n -s $1 | cut -f3 -d ":" )
-device=$( lspci -n -s $1 | cut -f3 -d ":" )
+device=$( lspci -n -s $1 | cut -f4 -d ":" )
 bdf=$1
 echo "bdf: $bdf, vendor: $vendor, device: $device"
 
